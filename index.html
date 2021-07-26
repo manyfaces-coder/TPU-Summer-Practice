@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food</title>
+    <link rel="icon" type="image" href="icons/running.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body bgcolor="#00c9ff">
+    <header class="header">
+        <div class="header__left-block">
+            <div class="header__logo">
+                <img src="icons/running.svg" alt="Логотип" width="100" height="100">
+            </div>
+            <nav class="header__links">
+                <a href="#facts" class="header__link">Факты</a>
+                <a href="#calculator" class="header__link">Калькулятор параметров</a>
+                <a href="#healthy_food" class="header__link">Здоровое питание</a>
+                <a href="#recipes" class="header__link">Полезные блюда</a>
+            </nav>
+        </div>
+        <div class="header__right-block">
+            <button data-modal class="btn btn_white">Связаться с нами</button>
+        </div>
+    </header>
+    <div class="sidepanel">
+        <div class="sidepanel__text"><span>Социальные сети</span></div>
+        <div class="sidepanel__divider"></div>
+        <a href="https://www.instagram.com/_manyfaces___/" target="_blank" class="sidepanel__icon">
+            <img src="icons/instagram.svg" alt="instagram">
+        </a>
+        <a href="https://vk.com/id141338946" target="_blank" class="sidepanel__icon">
+            <img src="icons/vk.svg" alt="Vk">
+        </a>
+        <a href="#" class="sidepanel__icon" id="upp">
+            <img src="icons/up-arrow.svg" alt="upper">
+        </a>
+    </div>
+
+    <div class="preview">
+        <div class="square">
+            <img src="img/start.jpg" alt="">
+            <div class="start_square">Поможем вам следить за вашим здоровьем!</div>
+        </div>
+        <div id='facts' class="container">
+            <h1>Факты о калориях</h1>
+            <div class="tabcontainer">
+                <div class="tabcontent">
+                    <img src="img/tabs/fact-1.jpg" alt="vegy">
+                    <div class="tabcontent__descr">
+                        <strong>Калория — это единица измерения энергии от пищи.</strong> Технически одна калория — это количество энергии, необходимое для нагрева одного грамма воды на 1 ºC. При чём тут еда? Белки, жиры и углеводы, из которых она состоит, содержат энергию. Как раз эта энергия и измеряется в калориях.
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/tabs/fact-2.jpg" alt="elite">
+                    <div class="tabcontent__descr">
+                        <strong>Калории позволяют нам выжить, создают новые ткани и дают энергию для движения.</strong> Каждый раз, когда вы едите, ваш организм разбирает поступающую энергию для самых разных целей.                    
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/tabs/fact-3.jpg" alt="post">
+                    <div class="tabcontent__descr">
+                        <strong>Вашему организму может требоваться вовсе не 2 000 ккал в день.</strong> Две тысячи килокалорий — это средний показатель. Индивидуальные потребности в энергии зависят от возраста, пола, веса, уровня активности и цели: похудеть, поправиться, оставаться в прежней форме.                    
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/tabs/fact-4.jpeg" alt="vegy">
+                    <div class="tabcontent__descr">
+                        <strong>Количество и качество калорий одинаково важны.</strong>  Похудеть можно и на сладостях, если есть их мало. Но количество калорий — это только одна сторона медали. Значение имеют и питательные вещества, содержащиеся в еде.
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/tabs/fact-5.jpg" alt="post">
+                    <div class="tabcontent__descr">
+                        <strong>Продуктов с отрицательной калорийностью не существует.</strong> Есть мнение, что некоторые фрукты и овощи настолько низкокалорийны, что на их переваривание требуется больше энергии, чем они дать. Это не так. Организм тратит 10–15% от поступающих калорий на переработку пищи.                    
+                    </div>
+                </div>
+                <div class="tabheader">
+                    <h3>Выберите факт</h3>
+                    <div class="tabheader__items">
+                        <div class="tabheader__item tabheader__item_active">Факт №1</div>
+                        <div class="tabheader__item">Факт №2</div>
+                        <div class="tabheader__item">Факт №3</div>
+                        <div class="tabheader__item">Факт №4</div>
+                        <div class="tabheader__item">Факт №5</div>
+                    </div>
+                </div>
+            </div>
+            <div class="preview__life">Живи полной жизнью!</div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="calculating" id="calculator">
+        <div class="container">
+            <h2 class="title">Рассчет индивидуальных параметров</h2>
+                <div class="calculating__subtitle">
+                    Ваш пол
+                </div>
+                <div class="calculating__choose" id="gender">
+                    <div id='female' class="calculating__choose-item calculating__choose-item_active">Женщина</div>
+                    <div id='male' class="calculating__choose-item">Мужчина</div>
+                </div>
+
+                <div class="calculating__subtitle">
+                    Ваши параметры 
+                </div>
+                <div class="calculating__choose calculating__choose_medium">
+                    <input type="text" id="height" placeholder="Введите рост" class="calculating__choose-item">
+                    <input type="text" id="weight" placeholder="Введите вес"  class="calculating__choose-item">
+                    <input type="text" id="age" placeholder="Введите возраст" class="calculating__choose-item">
+                </div>
+
+                <div class="calculating__subtitle">
+                    Выберите вашу физическая активность
+                </div>
+                <div class="calculating__choose calculating__choose_big">
+                    <div data-ratio='1.2' id="low" class="calculating__choose-item">Низкая активность </div>
+                    <div data-ratio='1.375' id="small"  class="calculating__choose-item calculating__choose-item_active">Невысокая активность</div>
+                    <div data-ratio='1.55' id="medium" class="calculating__choose-item">Умеренная активность</div>
+                    <div data-ratio='1.725' id="high" class="calculating__choose-item">Высокая активность</div>
+                    <div data-ratio='1.9' id="very_high" class="calculating__choose-item">Очень высокая активность</div>
+                </div>
+
+                <div class="calculating__divider"></div>
+
+                <div class="calculating__total">
+                    <div class="calculating__subtitle">
+                        <a href="https://fitseven.ru/zdorovie/metabolism/sutochnaya-norma-kaloriy#:~:text=Формула Харриса-Бенедикта" title="По формуле Харриса-Бенедикта" target="_blank">Ваша суточная норма калорий<sup>*</sup>:</a>
+                    </div>
+                    <div class="calculating__result">
+                        <span></span> ккал
+                    </div>
+                </div>
+                <br></br>
+                <div class="calculating__total_weight">
+                    <div class="calculating__subtitle">
+                        <a href="https://fitseven.ru/zdorovie/metabolism/formula-idealnogo-vesa#:~:text=Формула Лоренца для" title="По формуле Лоренца" target="_blank">Ваш идеальный вес<sup>*</sup>:</a>
+                    </div>
+                    <div class="calculating__weight__result">
+                        <span></span> кг
+                    </div>
+                </div>
+                <br></br>
+                <div class="calculating__total_water">
+                    <div class="calculating__subtitle">
+                        <a href="https://fitseven.ru/zdorovie/metabolism/formula-idealnogo-vesa#:~:text=Общая формула расчета потребления" title="По формуле..." target="_blank">Норма воды в день<sup>*</sup>:</a>
+                    </div>
+                    <div class="calculating__water__result">
+                        <span></span> мл
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="offer">
+        <div class="bgc_y"></div>
+        <div class="container" id="healthy_food">
+            <div class="offer__text">
+                <h2 class="title">Правила и принципы здорового питания</h2>
+                <div class="offer__descr">
+                    Базируясь на законах природы, специалисты в области здорового питания выделяют два основных принципа здорового питания.
+                    <br></br>
+                    <strong>Принцип первый:</strong> энергетическая ценность (калорийность) суточного рациона должна соответствовать ежедневным энерготратам человека.
+                    <br></br>
+                    <strong>Важно помнить!</strong>   Количество калорий, получаемых с пищей, должно соответствовать количеству расходуемой нами энергии. Энергия человека расходуется на поддержание температуры тела, выполнение всех физиологических функций и биохимических процессов, совершение мышцами механической работы, а также на переваривание и усвоение пищи.
+                    <br></br>
+                    <strong>Принцип второй:</strong> необходимо, чтобы химический состав суточного рациона питания каждого человека соответствовал его ежедневным физиологическим потребностям.
+                </div>
+            </div>
+                <div class="offer__action">
+                <button data-modal class="btn btn_dark">Связаться с нами</button>
+                </div>
+        </div>
+        <div class="container">
+            <div class="offer__advantages">
+                <!-- <h2>Быстро и полезно</h2> -->
+                <div class="offer__advantages-text">
+                    Схематически <strong>рекомендации</strong> по правильному потреблению пищевых продуктов можно представить в виде <strong>«пирамиды здорового питания»:</strong> 
+                </div>
+            
+            </div>
+            <div class="offer__slider">
+                <div class="offer__slider-counter">
+                    <div class="offer__slider-prev">
+                        <img src="icons/left.svg" alt="prev">
+                    </div>
+                    <span id="current">03</span>
+                    /
+                    <span id="total">04</span>
+                    <div class="offer__slider-next">
+                        <img src="icons/right.svg" alt="next">
+                    </div>
+                </div>
+                <div class="offer__slider-wrapper">
+                    <div class="offer__slider-inner">
+                        <div class="offer__slide">
+                            <img src="img/slider/elka.png" alt="elka" >
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/bread.jpg" alt="cereals">
+                            <div class='centered'>Нижнюю (большую) часть пирамиды занимают зерновые продукты, которые должны составлять в рационе 40%, они обеспечат организм,  в необходимом количестве -  белками, клетчаткой, минералами, витаминами, углеводами</div>
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/veg_fruit.jpg" alt="vegetables">
+                            <div class='centered'>Над ними - овощи, фрукты и ягоды  - 35% - это витамины, минералы, клетчатка</div>
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/milk.jpg" alt="milk">
+                            <div class='centered'>Следующая, (меньшая) часть пирамиды, отведена молочным продуктам, а также мясу, рыбе, яйцам 20% ,что обеспечит необходимое поступление белков, жиров, углеводов, минералов, витаминов</div>
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/sweets.jpg" alt="sweets">
+                            <div class='centered'>Верхняя и самая узкая часть пирамиды включает жиры, сладости, сахар, потребление которых не исключается, а ограничивается – всего 5% рациона</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    
+
+    <div class="divider"></div>
+
+    <div class="menu" id="recipes">
+        <h2 class="title">Полезные блюда на каждый день</h2>
+        <div class="menu__field">
+            <div class="container">
+                <div class="menu__item">
+                    <img src="img/menu/recipe.jpeg" alt="vegy">
+                    <h3 class="menu__item-subtitle">Салат из молодых кабачков с козьим сыром</h3>
+                    <div class="menu__item-descr"><strong>Потребуется:</strong> 
+                        
+                        1 маленький кабачок,
+                        
+                        50 г тыквенных семечек,
+                        
+                        100 г козьего сыра (можно заменить адыгейским),
+                        
+                        2 ст.л. оливкового масла,
+                        
+                        1 ч.л. лимонного сока,
+                        
+                        свежая зелень,
+                        
+                        соль
+                    <br></br>
+                    <strong>Приготовление:</strong>
+                    <br></br>
+                    1. Кабачок почистить от кожуры и нарезать ломтиками. Посолить и оставить на 10 минут. Затем лишнюю жидкость слить.
+                    <br></br>
+                    2. Тыквенные семечки слегка обжарить. Сыр мелко порезать или раскрошить вилкой.
+                    <br></br>
+                    3. Смешать сыр, тыквенные семечки и нарезанный кабачок. Сбрызнуть лимонным соком и заправить оливковым маслом. Готовый салат подавать сразу со свежей зеленью.
+                    Приятного аппетита!
+                </div>
+                    <div class="menu__item-divider"></div>
+                    <div class="menu__item-calories">
+                        <div class="menu__item-cost">Общий вес: 449г</div>
+                        <div class="menu__item-total"><span>197</span>Ккал/100г</div>
+                    </div>
+                </div>
+                <div class="menu__item">
+                    <img src="img/menu/recipe2.jpeg" alt="elite">
+                    <h3 class="menu__item-subtitle">Японский морковный суп «Тайна гейши»</h3>
+                    <div class="menu__item-descr"><strong>Потребуется:</strong>
+                        овощной бульон, морковь, лук репчатый, сыр плавленный, масло оливковое, петрушка, соль поваренная пищевая, перец черный молотый
+                        <br></br>
+                        <strong>Приготовление:</strong>
+                        <br></br>
+                        1. В сковороду поместить нарезанный лук, обжарить его в масле до золотистого цвета, примерно 5 минут. Затем добавить натертую на терке морковь, обжарить еще одну минуту, не более.
+                        <br></br>
+                        2. Вскипятить бульон, отправить в него нарезанный сыр, соль, перец, овощи, после закипания варить 15 минут на медленном огне. Дать настояться 10 минут.
+                        <br></br>
+                        3. Взбить суп блендером, украсить листиками петрушки.
+                        Приятного аппетита!
+                    </div>
+                    <div class="menu__item-divider"></div>
+                    <div class="menu__item-calories">
+                        <div class="menu__item-cost">Общий вес: 1831г</div>
+                        <div class="menu__item-total"><span>41</span>Ккал/100г</div>
+                    </div>
+                </div>
+                <div class="menu__item">
+                    <img src="img/menu/recipe3.jpeg" alt="elite">
+                    <h3 class="menu__item-subtitle">Куриные котлетки (вкусные невероятно!)</h3>
+                    <div class="menu__item-descr"><strong>Потребуется:</strong>
+                        земляника, клубника, мука пшеничная , яйцо куриное, масло подсолнечное, сметана 10,0% жирности, сахар-песок, разрыхлитель теста, ванилин
+                        <br></br>
+                        <strong>Приготовление:</strong>
+                        <br></br>
+                        1. В глубокой миске муку соединить с разрыхлителем. Сахар взбить с дезодорированным растительным маслом, добавить ванилин. Затем ввести 3 яйца по одному, не переставая взбивать. Далее постепенно добавлять сметану и мучную смесь, аккуратно перемешивая.
+                        <br></br>
+                        2. Выложить тесто в форму диаметром 23-24 см, сверху разместить ягоды. Выпекать в разогретой духовке при температуре 180 градусов 45 минут.
+                        Приятного аппетита!
+                    </div>
+                    <div class="menu__item-divider"></div>
+                    <div class="menu__item-calories">
+                        <div class="menu__item-cost">Общий вес: 1041г</div>
+                        <div class="menu__item-total"><span>281</span>Ккал/100г</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="promotion">
+        <div class="bgc_y"></div>
+        <div class="container">
+            <div class="promotion__text">
+                <div class="title">Акция!</div>
+                <div class="promotion__descr">
+                    Подписывайся на наш <strong>Instagram</strong> и учавствуй в конкурсе!<span></span>
+                    <br><br>
+                    Акция закончится 1 ноября в 00:00 по Московскому времени.
+                </div>
+            </div>
+            <div class="promotion__timer">
+                <div class="title">Осталось до конца акции:</div>
+                <div class="timer">
+                    <div class="timer__block">
+                        <span id="days">12</span>
+                        дней
+                    </div>
+                    <div class="timer__block">
+                        <span id="hours">20</span>
+                        часов
+                    </div>
+                    <div class="timer__block">
+                        <span id="minutes">56</span>
+                        минут
+                    </div>
+                    <div class="timer__block">
+                        <span id="seconds">20</span>
+                        секунд
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social">
+                <div class="subtitle"> <strong>Мы в социальных сетях:</strong> </div>
+                <a href="https://www.instagram.com/_manyfaces___/"" class="link">instagram</a>
+                <a href="https://vk.com/id141338946" class="link"> Вконтакте <br></br></a>
+                <div class="subtitle"> <strong>Почта:</strong> </div>
+                <a href="#" class="link">oas19@tpu.ru</a>
+            </div>
+            <div class="logotype">
+                <img src="icons/running.svg" alt="logotype">
+                <p ><strong>Edition by Oljik</strong> </p>
+            </div>
+            <div class="call">
+                <div class="subtitle"> <strong>Или позвоните нам</strong> </div>
+                <a href="#" class="link">+79641234567</a>
+                <a href="#" class="link">+79231234567</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <form action="#">
+                    <div data-close class="modal__close">&times;</div>
+                    <div class="modal__title">Для сотрудничества пишите нам</div>
+                    <div class="modal__input"><span>Социальные сети</span>
+                        <div class="modal__input"> 
+                            <a href="https://www.instagram.com/_manyfaces___/" target="_blank" class="sidepanel__icon">
+                            <img src="icons/instagram.svg" alt="instagram">
+                            instagram
+                        </a></div>
+                        <div class="modal__input"> 
+                            <a href="https://vk.com/id141338946" target="_blank" class="sidepanel__icon">
+                            <img src="icons/vk.svg" alt="Vk">
+                            Вконтакте
+                        </a></div>
+                    </div>
+                    <div class="modal__input"><span>Почта</span>
+                        <div class="modal__input"> 
+                            <a href="#" target="_blank" class="sidepanel__icon">
+                            <img src="icons/email.svg" alt="email">
+                            oas19@tpu.ru
+                        </a></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
